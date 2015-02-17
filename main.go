@@ -6,6 +6,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"time"
 )
 
 const (
@@ -83,14 +84,17 @@ func main() {
 }
 
 func headrev(w http.ResponseWriter, r *http.Request) {
+	time.Sleep(time.Second)
 	fmt.Fprintf(w, headrevContent)
 }
 
 func allplugins(w http.ResponseWriter, r *http.Request) {
+	time.Sleep(time.Second)
 	fmt.Fprintf(w, allpluginsContent)
 }
 
 func updatedplugins(w http.ResponseWriter, r *http.Request) {
+	time.Sleep(time.Second)
 	fmt.Fprintf(w, updatedpluginsContent)
 }
 
